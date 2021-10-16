@@ -40,7 +40,62 @@ body,html{
 /*----------------
 Global Style
 ----------------*/
+.SectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0 80px 0;
+}
+.SectionTitle h2{
+    color: var(--color-text-2);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 30px;
+    text-align: center;
+}
+.SectionTitle p{
+    color: var(--color-text-2);
+    opacity: 60%;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: 580px;
+}
+/*----------------
+Swiper Style
+----------------*/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 /*----------------
 Header
 ----------------*/
@@ -222,14 +277,14 @@ Dekstop Menu
     align-items: center;
     justify-content: center;
 }
-.DekstopMenu .container .row .col-12 ul{
+.DekstopMenu .container .row .col-12 > ul{
     display: flex;
     align-items: center;
     height: 100%;
     padding: 0;
     margin: 0;
 }
-.DekstopMenu .container .row .col-12 ul li{
+.DekstopMenu .container .row .col-12 > ul  li{
     height: 100%;
     display: flex;
     align-items: center;
@@ -238,17 +293,17 @@ Dekstop Menu
     position: relative;
     width: 80px;
 }
-.DekstopMenu .container .row .col-12 ul li a{
+.DekstopMenu .container .row .col-12 > ul li a{
     color: white;
     text-decoration: none;
     opacity: 60%;
 
 }
-.DekstopMenu .container .row .col-12 ul li.active a{
+.DekstopMenu .container .row .col-12 > ul li.active a{
     color: white;
     opacity: 1;
 }
-.DekstopMenu .container .row .col-12 ul li.active span{
+.DekstopMenu .container .row .col-12 > ul li.active span{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -258,6 +313,40 @@ Dekstop Menu
     opacity: 50%;
     border-radius: 4px 4px 0px 0px;
     box-shadow: 0px 29px 39px rgba(0, 0, 0, 0.01);
+}
+.DekstopMenu .container .row .col-12 > ul li .SubMenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--color-2);
+    color: white;
+    z-index: 100;
+    width: 200px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    visibility: hidden;
+}
+.DekstopMenu .container .row .col-12 > ul li:hover .SubMenu{
+    opacity: 1;
+    visibility: visible;
+}
+.DekstopMenu .container .row .col-12 > ul li .SubMenu ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+.DekstopMenu .container .row .col-12 > ul li .SubMenu ul li{
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.DekstopMenu .container .row .col-12 > ul li .SubMenu ul li:hover a{
+    opacity: 1;
 }
 /*----------------
 Mobile Nav
@@ -476,6 +565,7 @@ BottomMenu
     width: 100%;
     background: var(--color-1);
     box-shadow: 0 0 9px rgb(0 0 0 / 12%);
+    z-index: 100;
 }
 .BottomMenu .content{
     width: 100%;
@@ -505,6 +595,135 @@ BottomMenu
     text-decoration: none;
     font-size: 18px;
     color: var(--color-text-4);
+}
+/*----------------
+Products
+----------------*/
+#Products .ProductCard{
+    margin: 10px 0;
+    
+}
+#Products .ProductCard .content{
+    background: var(--color-1);
+    box-shadow: 0px 10px 20px rgb(97 105 140 / 10%);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 300ms;
+}
+#Products .ProductCard .content .HoverDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(9, 30, 66, .7);
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
+    opacity: 0;
+}
+#Products .ProductCard .content .HoverDiv ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+#Products .ProductCard .content:hover {
+    transform: translateY(-10px);
+}
+#Products .ProductCard .content:hover .HoverDiv{
+    opacity: 1;
+}
+#Products .ProductCard .content .HoverDiv ul li:nth-child(1) a{
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    color: #fff;
+    width: 160px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid #FF416C;
+    border-radius: 50px;
+    transition: all 400ms;
+    text-decoration: none;
+    text-align: center;
+}
+
+#Products .ProductCard .content .HoverDiv ul li:nth-child(1) a:hover{
+    box-shadow: 0 6px 12px -3px rgb(9 30 66 / 40%);
+    transform: translate(0, -3px);
+    -webkit-transform: translate(0, -3px);
+}
+#Products .ProductCard .content .HoverDiv ul li{
+    margin: 15px 0;
+}
+#Products .ProductCard .content .HoverDiv ul li a{
+    background: transparent;
+    color: #fff;
+    width: 160px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: all 400ms;
+    text-decoration: none;
+    text-align: center;
+}
+#Products .ProductCard .content .HoverDiv ul li a:hover{
+    box-shadow: 0 6px 12px -3px rgb(9 30 66 / 40%);
+    transform: translate(0, -3px);
+    -webkit-transform: translate(0, -3px);
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    border-color: #FF416C;
+
+}
+#Products .ProductCard .content .HoverDiv ul li a i{
+    margin-right: 10px;
+}
+#Products .ProductCard .content .ImgDiv img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+#Products .ProductCard .content .ImgDiv{
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+#Products .ProductCard .content .TextDiv{
+    padding: 20px;
+}
+#Products .ProductCard .content .TextDiv .TopText h5{
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: var(--color-text-4);
+    font-size: normal;
+}
+#Products .ProductCard .content .TextDiv .TopText p{
+    line-height: 26px;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-text-1);
+    font-size: 16px;
+}
+#Products .ProductCard .content .TextDiv .BottomText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#Products .ProductCard .content .TextDiv .BottomText p{
+    margin: 0;
+    color: var(--color-text-4);
+    font-weight: bold;
+    font-style: normal;
+    line-height: 26px;
+}
+#Products .ProductCard .content .TextDiv .BottomText i{
+    color: #ffc000;
 }
 /*----------------
 Medias

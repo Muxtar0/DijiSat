@@ -12,7 +12,10 @@
     <link rel="stylesheet" href="assets/css/hamburger.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <!-- Links end -->
+
 </head>
 <body>
     <!-- Header start -->
@@ -73,7 +76,16 @@
                             <li class="active"><a href="#">Home</a> <span></span></li>
                             <li><a href="#">Books</a> <span></span></li>
                             <li><a href="#">Magazine</a> <span></span></li>
-                            <li><a href="#">Textbooks</a> <span></span></li>
+                            <li><a href="#">Textbooks</a> <span></span>
+                                <div class="SubMenu">
+                                    <ul>
+                                        <li><a href="#">SubMenu 1</a></li>
+                                        <li><a href="#">SubMenu 2</a></li>
+                                        <li><a href="#">SubMenu 3</a></li>
+                                        <li><a href="#">SubMenu 4</a></li>
+                                    </ul>
+                                </div>
+                            </li>
                             <li><a href="#">Audiobooks</a> <span></span></li>
                             <li><a href="#">Recomended</a> <span></span></li>
                             <li><a href="#">Sale</a></li>
@@ -158,12 +170,140 @@
     </div>
     <!-- Bottom Menu end -->
 
-
+    <!-- Products Section start -->
+    <section id="Products">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 SectionTitle">
+                    <h2>Trending this week</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 ProductCard">
+                    <div class="content">
+                        <div class="ImgDiv">
+                            <img src="https://themebing.com/wp/tijarah/wp-content/uploads/2019/10/image_processing20191219-10629-zhqr2q-750x430.png" alt="">
+                        </div>
+                        <div class="TextDiv">
+                            <div class="TopText">
+                                <h5>Benchmark</h2>
+                                <p>Photografy WordPres Theme</p>
+                            </div>
+                            <div class="BottomText">
+                                <p>$59.00-$199.00</p>
+                                <div class="RateDiv">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HoverDiv">
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-eye"></i> Preview</a></li>
+                                <li><a href="#"> <i class="fa fa-info-circle"></i> Details</a></li>
+                                <li><a href="#">Select options</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 ProductCard">
+                    <div class="content">
+                        <div class="ImgDiv">
+                            <img src="https://themebing.com/wp/tijarah/wp-content/uploads/2019/10/image_processing20191219-10629-zhqr2q-750x430.png" alt="">
+                        </div>
+                        <div class="TextDiv">
+                            <div class="TopText">
+                                <h5>Benchmark</h2>
+                                <p>Photografy WordPres Theme</p>
+                            </div>
+                            <div class="BottomText">
+                                <p>$59.00-$199.00</p>
+                                <div class="RateDiv">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HoverDiv">
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-eye"></i> Preview</a></li>
+                                <li><a href="#"> <i class="fa fa-info-circle"></i> Details</a></li>
+                                <li><a href="#">Add To Card</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 ProductCard">
+                    <div class="content">
+                        <div class="ImgDiv">
+                            <img src="https://themebing.com/wp/tijarah/wp-content/uploads/2019/10/image_processing20191219-10629-zhqr2q-750x430.png" alt="">
+                        </div>
+                        <div class="TextDiv">
+                            <div class="TopText">
+                                <h5>Benchmark</h2>
+                                <p>Photografy WordPres Theme</p>
+                            </div>
+                            <div class="BottomText">
+                                <p>$59.00-$199.00</p>
+                                <div class="RateDiv">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="HoverDiv">
+                            <ul>
+                                <li><a href="#"> <i class="fa fa-eye"></i> Preview</a></li>
+                                <li><a href="#"> <i class="fa fa-info-circle"></i> Details</a></li>
+                                <li><a href="#">Select options</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Products Section end -->
 
 
 
     <!-- Scripts start -->
     <script src="assets/js/main.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        // var swiper = new Swiper(".mySwiper", {
+        //   slidesPerView: 1,
+        //   spaceBetween: 10,
+        //   pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true,
+        //   },
+        //   breakpoints: {
+        //     640: {
+        //       slidesPerView: 2,
+        //       spaceBetween: 20,
+        //     },
+        //     768: {
+        //       slidesPerView: 4,
+        //       spaceBetween: 40,
+        //     },
+        //     1024: {
+        //       slidesPerView: 5,
+        //       spaceBetween: 50,
+        //     },
+        //   },
+        // });
+      </script>
     <!-- Scripts end -->
 </body>
 </html>
