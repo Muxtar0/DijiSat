@@ -45,7 +45,7 @@ Global Style
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 0 80px 0;
+    padding: 40px 0 20px 0;
 }
 .SectionTitle h2{
     color: var(--color-text-2);
@@ -62,6 +62,29 @@ Global Style
     line-height: 24px;
     text-align: center;
     width: 580px;
+}
+
+.SecondSectionTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 0px 0;
+}
+.SecondSectionTitle h2{
+    color: var(--color-text-2);
+    font-size: 600;
+    font-weight: 35px;
+    line-height: 52.5px;
+}
+.SecondSectionTitle a{
+    text-decoration: none;
+    color: var(--color-2);
+    font-size: 500;
+    font-weight: 16px;
+    line-height: 24px;
+}
+.SecondSectionTitle a i{
+    margin-left: 10px;
 }
 /*----------------
 Swiper Style
@@ -95,6 +118,63 @@ Swiper Style
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .swiper-button-next::after{
+    display: none;
+  }
+  .swiper-button-prev::after{
+    display: none;
+  }
+  .swiper-button-next,
+  .swiper-button-prev{
+      width: 57px !important;
+      height: 57px !important;
+      background: var(--color-1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 14px 26px rgba(39, 13, 48, 0.25);
+  }
+  .swiper-button-next i,
+  .swiper-button-prev i{
+    font-size: 20px;
+    color: var(--color-text-4);
+  }
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover{
+      background: var(--color-2);
+
+  }
+  .swiper-button-next:hover i,
+  .swiper-button-prev:hover i{
+    color: white;
+  }
+  @media screen and (max-width:992px) {
+    .swiper-button-next,
+    .swiper-button-prev{
+        top: auto !important;
+        bottom: 10px !important;
+        left: auto !important;
+        right: 25px !important;
+        background: transparent !important;
+        height: 20px !important;
+        width: 30px !important;
+        box-shadow: none !important;
+    }
+    .swiper-button-next i,
+    .swiper-button-prev i{
+        color: var(--color-2) !important;
+
+    }
+    .swiper-button-next:hover i,
+    .swiper-button-prev:hover i{
+        color: var(--color-2) !important;
+    }
+    .swiper-button-prev{
+        margin-right: 30px !important;
+    }
   }
 /*----------------
 Header
@@ -133,7 +213,7 @@ Dekstop Nav
 }
 .DekstopNav .SearchBox div{
     height: 52px;
-    width: 450px;
+    width: 550px;
     background: var(--color-3);
     display: flex;
     align-items: center;
@@ -169,34 +249,53 @@ Dekstop Nav
     outline: none;
     background: transparent;
 }
+.DekstopNav .BasketDarkMode{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DekstopNav .Basket{
+    margin-right: 20px;
+}
 .DekstopNav .Basket div button{
     background: transparent;
     border: none;
     outline: none;
-    width: 24px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-3);
 }
 .DekstopNav .Basket div a{
     background: transparent;
     border: none;
     outline: none;
-    width: 24px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     position: relative;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-3);
 }
 .DekstopNav .Basket div  svg{
-    width: 100%;
-    height: 100%;
+    width: 25px;
+    height: 25px;
 }
 .DekstopNav .Basket div  svg path {
     fill: var(--color-4);
 }
+
 .DekstopNav .Basket div  .CountDiv{
     position: absolute;
-    bottom: -60%;
-    right: -50%;
+    bottom: -5%;
+    right: -10%;
     width: 20px;
     height: 20px;
     border-radius: 50%;
@@ -478,7 +577,7 @@ Mobile Open Menu
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
     z-index: 1000;
 }
@@ -585,7 +684,7 @@ BottomMenu
     align-items: center;
     justify-content: center;
     height: 100%;
-    margin: 0 20px;
+    margin: 0 15px;
 }
 .BottomMenu .content ul li a{
     display: flex;
@@ -593,12 +692,18 @@ BottomMenu
     justify-content: center;
     flex-direction: column;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--color-text-4);
+}
+.BottomMenu .content ul li a i{
+    font-size: 18px !important;
 }
 /*----------------
 Products
 ----------------*/
+#Products {
+    padding: 40px 0;
+}
 #Products .ProductCard{
     margin: 10px 0;
     
@@ -726,6 +831,179 @@ Products
     color: #ffc000;
 }
 /*----------------
+Features
+----------------*/
+#Features{
+    padding: 28px 0;
+    background: #FCF8FD;
+}
+#Features .Card{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#Features .Card svg{
+    height: 47px;
+    width: 60px;
+    margin: 0;
+}
+#Features .Card h4{
+    color: black;
+    font-size: 500;
+    font-weight: 22px;
+    line-height: 24px;
+    margin: 10px 0;
+}
+#Features .Card p{
+    color: black;
+    font-size: 400;
+    font-weight: 14px;
+    line-height: 21px;
+    opacity: 50%;
+    margin: 0;
+}
+/*----------------
+Best Sellers
+----------------*/
+#BestSellers .container{
+    padding: 0;
+}
+
+#BestSellers .container .col-12.SecondSectionTitle{
+    padding: 0 25px;
+    padding-top: 40px;
+}
+#BestSellers .container .col-12{
+    padding: 0;
+}
+#BestSellers .BestSellersSwiper{
+    padding: 30px 30px;
+
+}
+#BestSellers .ProductCard .content{
+    background: var(--color-1);
+    box-shadow: 0px 10px 20px rgb(97 105 140 / 10%);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: all 300ms;
+}
+#BestSellers .ProductCard .content .HoverDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(9, 30, 66, .7);
+    width: 100%;
+    height: 100%;
+    transition: all 300ms;
+    opacity: 0;
+}
+#BestSellers .ProductCard .content .HoverDiv ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+#BestSellers .ProductCard .content:hover {
+    transform: translateY(-10px);
+}
+#BestSellers .ProductCard .content:hover .HoverDiv{
+    opacity: 1;
+}
+#BestSellers .ProductCard .content .HoverDiv ul li:nth-child(1) a{
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    color: #fff;
+    width: 160px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid #FF416C;
+    border-radius: 50px;
+    transition: all 400ms;
+    text-decoration: none;
+    text-align: center;
+}
+
+#BestSellers .ProductCard .content .HoverDiv ul li:nth-child(1) a:hover{
+    box-shadow: 0 6px 12px -3px rgb(9 30 66 / 40%);
+    transform: translate(0, -3px);
+    -webkit-transform: translate(0, -3px);
+}
+#BestSellers .ProductCard .content .HoverDiv ul li{
+    margin: 15px 0;
+}
+#BestSellers .ProductCard .content .HoverDiv ul li a{
+    background: transparent;
+    color: #fff;
+    width: 160px;
+    padding: 10px 15px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50px;
+    transition: all 400ms;
+    text-decoration: none;
+    text-align: center;
+}
+#BestSellers .ProductCard .content .HoverDiv ul li a:hover{
+    box-shadow: 0 6px 12px -3px rgb(9 30 66 / 40%);
+    transform: translate(0, -3px);
+    -webkit-transform: translate(0, -3px);
+    background: linear-gradient(to right, #FF416C, #FF4B2B);
+    border-color: #FF416C;
+
+}
+#BestSellers .ProductCard .content .HoverDiv ul li a i{
+    margin-right: 10px;
+}
+#BestSellers .ProductCard .content .ImgDiv img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+#BestSellers .ProductCard .content .ImgDiv{
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+#BestSellers .ProductCard .content .TextDiv{
+    padding: 20px;
+}
+#BestSellers .ProductCard .content .TextDiv .TopText h5{
+    font-weight: bold;
+    margin-bottom: 7px;
+    color: var(--color-text-4);
+    font-size: normal;
+    text-align: start;
+}
+#BestSellers .ProductCard .content .TextDiv .TopText p{
+    line-height: 26px;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color-text-1);
+    font-size: 16px;
+    text-align: start;
+}
+#BestSellers .ProductCard .content .TextDiv .BottomText{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+#BestSellers .ProductCard .content .TextDiv .BottomText p{
+    margin: 0;
+    color: var(--color-text-4);
+    font-weight: bold;
+    font-style: normal;
+    line-height: 26px;
+}
+#BestSellers .ProductCard .content .TextDiv .BottomText i{
+    color: #ffc000;
+}
+/*----------------
 Medias
 ----------------*/
 @media (min-width:992px){
@@ -746,5 +1024,10 @@ Medias
     .DekstopNav{
         display: none;
     }
-
+    .SectionTitle p{
+        width: 100%;
+    }
+    #BestSellers .BestSellersSwiper{
+        padding: 50px 0px;
+    }
 }
