@@ -6,13 +6,30 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    transition: all 300ms;
 }
 :root{
     --color-1:#fff;
-    --color-text-1:#636363;
-    --color-text-2:#000000;
+    --color-4:#000000;
     --color-2:#8D28AD;
     --color-3:#F3F3F3;
+    --color-text-3:#fff;
+    --color-text-1:#636363;
+    --color-text-2:#000000;
+    --color-text-4:#222;
+
+}
+body.active{
+    --color-1:#222;
+    --color-2:#8D28AD;
+    --color-3:#333;
+    --color-4:#fff;
+    --color-text-1:white;
+    --color-text-1:#F3F3F3;
+    --color-text-2:white;
+    --color-text-4:#fff;
+
+
 }
 body,html{
     width: 100%;
@@ -56,7 +73,7 @@ Dekstop Nav
 .DekstopNav .logo p{
     margin: 0;
     font-weight: bold;
-    color: var(--color-text-2);
+    color: var(--color-text-4);
     font-size: 30px;
 }
 .DekstopNav .SearchBox div{
@@ -66,7 +83,7 @@ Dekstop Nav
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 15px;
+    border-radius: 8px;
     padding: 10px 20px;
     transition: all 300ms;
 }
@@ -105,11 +122,23 @@ Dekstop Nav
     height: 20px;
     position: relative;
 }
-.DekstopNav .Basket div button svg{
+.DekstopNav .Basket div a{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+    text-decoration: none;
+}
+.DekstopNav .Basket div  svg{
     width: 100%;
     height: 100%;
 }
-.DekstopNav .Basket div button .CountDiv{
+.DekstopNav .Basket div  svg path {
+    fill: var(--color-4);
+}
+.DekstopNav .Basket div  .CountDiv{
     position: absolute;
     bottom: -60%;
     right: -50%;
@@ -122,18 +151,31 @@ Dekstop Nav
     background: var(--color-2);
     color: white;
 }
-.DekstopNav .Basket div button .CountDiv p{
+.DekstopNav .Basket div  .CountDiv p{
     font-size: 14px;
     line-height: 21px;
     font-weight: 500;
     margin: 0;
+}
+.DekstopNav .LightNightMode button{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background: var(--color-3);
+    color: var(--color-text-2);
 }
 .DekstopNav .LoginRegister{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.DekstopNav .LoginRegister button:nth-child(1){
+.DekstopNav .LoginRegister a:nth-child(1){
     width: 102px;
     height: 50px;
     display: flex;
@@ -144,19 +186,21 @@ Dekstop Nav
     border-radius: 8px;
     border: none;
     outline: none;
+    text-decoration: none;
 }
-.DekstopNav .LoginRegister button:nth-child(2){
+.DekstopNav .LoginRegister a:nth-child(2){
     width: 182px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--color-2);
-    color: var(--color-1);
+    color: white;
     border-radius: 8px;
     border: none;
     outline: none;
     margin-left: 10px;
+    text-decoration: none;
 }
 /*----------------
 Dekstop Menu
@@ -195,13 +239,13 @@ Dekstop Menu
     width: 80px;
 }
 .DekstopMenu .container .row .col-12 ul li a{
-    color: var(--color-1);
+    color: white;
     text-decoration: none;
     opacity: 60%;
 
 }
 .DekstopMenu .container .row .col-12 ul li.active a{
-    color: var(--color-1);
+    color: white;
     opacity: 1;
 }
 .DekstopMenu .container .row .col-12 ul li.active span{
@@ -210,7 +254,7 @@ Dekstop Menu
     left: 0;
     width: 100%;
     height: 5px;
-    background: var(--color-1);
+    background: white;
     opacity: 50%;
     border-radius: 4px 4px 0px 0px;
     box-shadow: 0px 29px 39px rgba(0, 0, 0, 0.01);
@@ -220,8 +264,9 @@ Mobile Nav
 ----------------*/
 .MobileNav{
     width: 100%;
-    height: 60px;
+    height: 70px;
     padding-bottom: 10px;
+    padding: 0px 20px 0 0;
 
 }
 .MobileNav .container{
@@ -236,12 +281,71 @@ Mobile Nav
     align-items: center;
     justify-content: space-between;
 }
-
+.MobileNav .hamburger-inner{
+    background: var(--color-4);
+}
+.MobileNav .hamburger-inner::before{
+    background: var(--color-4);
+}
+.MobileNav .hamburger-inner::after{
+    background: var(--color-4);
+}
+.hamburger--elastic.is-active .hamburger-inner::after{
+    background: var(--color-4);
+}
+.hamburger--elastic.is-active .hamburger-inner{
+    background: var(--color-4);
+}
 .MobileNav .logo p{
     margin: 0;
     font-weight: bold;
-    color: var(--color-text-2);
+    color: var(--color-text-4);
     font-size: 30px;
+}
+
+.MobileNav  .Basket div a{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+    text-decoration: none;
+}
+.MobileNav  .Basket div button{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+
+}
+.MobileNav  .Basket div  svg{
+    width: 100%;
+    height: 100%;
+}
+.MobileNav  .Basket div  svg path{
+    fill:var(--color-4);
+}
+.MobileNav  .Basket div  .CountDiv{
+    position: absolute;
+    bottom: -60%;
+    right: -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-2);
+    color: white;
+}
+.MobileNav  .Basket div  .CountDiv p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    margin: 0;
 }
 /*----------------
 Mobile Open Menu
@@ -249,30 +353,45 @@ Mobile Open Menu
 
 .MobileOpenMenu{
     position: fixed;
-    top: 50px;
-    left: 0;
+    top: 70px;
+    left: -100%;
     width: 100%;
-    height: 0%;
-    background: var(--color-1);
+    height: 100%;
+
     transition: all 500ms;
-    visibility: hidden;
+
     z-index:1000;
     overflow: hidden;
     border-top: 1px solid var(--color-3);
 }
 
 .MobileOpenMenu.active{
-    height: 100%;
-    visibility: visible;
-}
+    left: 0%;
 
-.MobileOpenMenu .content{
+}
+.MobileOpenMenu .closeMobileOpenMenuDiv{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    background: black;
+    opacity: .5;
     width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: all 700ms;
+}
+.MobileOpenMenu.active .closeMobileOpenMenuDiv{
+    left: 0;
+}
+.MobileOpenMenu .content{
+    background: var(--color-1);
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    z-index: 1000;
 }
 .MobileOpenMenu .content .navList ul{
     padding: 0;
@@ -296,44 +415,28 @@ Mobile Open Menu
 .MobileOpenMenu .content .navList ul li.active a{
     color: var(--color-text-2);
 }
-.MobileOpenMenu .content .Basket{
-    margin: 20px 0;
-}
-.MobileOpenMenu .content .Basket div button{
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 24px;
-    height: 20px;
-    position: relative;
-}
-.MobileOpenMenu .content .Basket div button svg{
-    width: 100%;
-    height: 100%;
-}
-.MobileOpenMenu .content .Basket div button .CountDiv{
-    position: absolute;
-    bottom: -60%;
-    right: -50%;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.MobileOpenMenu .content .LightNightMode button{
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--color-2);
-    color: white;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    background: var(--color-3);
+    color: var(--color-text-2);
 }
-.MobileOpenMenu .content .Basket div button .CountDiv p{
-    font-size: 14px;
-    line-height: 21px;
-    font-weight: 500;
-    margin: 0;
+.MobileOpenMenu .content .Basket{
+    margin: 20px 0;
 }
+
 .MobileOpenMenu .content .LoginRegister{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
 
 }
 .MobileOpenMenu .content .LoginRegister button:nth-child(1){
@@ -355,11 +458,53 @@ Mobile Open Menu
     align-items: center;
     justify-content: center;
     background: var(--color-2);
-    color: var(--color-1);
+    color: white;
     border-radius: 8px;
     border: none;
     outline: none;
-    margin-left: 10px;
+    margin-top: 10px;
+}
+/*----------------
+BottomMenu
+----------------*/
+.BottomMenu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 65px;
+    padding: 5px 0;
+    width: 100%;
+    background: var(--color-1);
+    box-shadow: 0 0 9px rgb(0 0 0 / 12%);
+}
+.BottomMenu .content{
+    width: 100%;
+    height: 100%;
+}
+.BottomMenu .content ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+.BottomMenu .content ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 20px;
+}
+.BottomMenu .content ul li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color-text-4);
 }
 /*----------------
 Medias
@@ -368,12 +513,19 @@ Medias
     .MobileNav{
         display:none;
     }
+    .BottomMenu{
+        display: none;
+    }
 }
 @media (max-width:992px){
+    header{
+        height: 70px;
+    }
     .DekstopMenu{
         display: none;
     }
     .DekstopNav{
         display: none;
     }
+
 }
