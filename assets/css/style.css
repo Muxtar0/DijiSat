@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --color-1:#fff;
+    --color-text-1:#636363;
+    --color-text-2:#000000;
+    --color-2:#8D28AD;
+    --color-3:#F3F3F3;
+}
+body,html{
+    width: 100%;
+    overflow-x: hidden;
+    background: var(--color-1);
+}
+
+/*----------------
+Global Style
+----------------*/
+
+/*----------------
+Header
+----------------*/
+header{
+    height: 150px;
+    background: var(--color-1);
+    width: 100%;
+}
+
+/*----------------
+Dekstop Nav
+----------------*/
+.DekstopNav{
+    height: calc(100% - 50px);
+    width: 100%;
+    padding: 0 100px;
+}
+.DekstopNav .container{
+    height: 100%;
+}
+.DekstopNav .container .row{
+    height: 100%;
+}
+.DekstopNav .container .row .col-12{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DekstopNav .logo p{
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-text-2);
+    font-size: 30px;
+}
+.DekstopNav .SearchBox div{
+    height: 52px;
+    width: 450px;
+    background: var(--color-3);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: all 300ms;
+}
+
+.DekstopNav .SearchBox div input{
+    border: none;
+    outline: none;
+    width: 90%;
+    background: transparent;
+    transition: all 300ms;
+    color: var(--color-text-1);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    
+}
+
+.DekstopNav .SearchBox div input::placeholder{
+    color: var(--color-text-1);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 29px;
+    transition: all 300ms;
+}
+
+.DekstopNav .SearchBox div button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.DekstopNav .Basket div button{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+}
+.DekstopNav .Basket div button svg{
+    width: 100%;
+    height: 100%;
+}
+.DekstopNav .Basket div button .CountDiv{
+    position: absolute;
+    bottom: -60%;
+    right: -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-2);
+    color: white;
+}
+.DekstopNav .Basket div button .CountDiv p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    margin: 0;
+}
+.DekstopNav .LoginRegister{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DekstopNav .LoginRegister button:nth-child(1){
+    width: 102px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-1);
+    color: var(--color-text-1);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.DekstopNav .LoginRegister button:nth-child(2){
+    width: 182px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-2);
+    color: var(--color-1);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+/*----------------
+Dekstop Menu
+----------------*/
+.DekstopMenu{
+    width: 100%;
+    height: 50px;
+    background: var(--color-2);
+}
+.DekstopMenu .container{
+    height: 100%;
+}
+.DekstopMenu .container .row{
+    height: 100%;
+}
+.DekstopMenu .container .row .col-12{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.DekstopMenu .container .row .col-12 ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+.DekstopMenu .container .row .col-12 ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px;
+    position: relative;
+    width: 80px;
+}
+.DekstopMenu .container .row .col-12 ul li a{
+    color: var(--color-1);
+    text-decoration: none;
+    opacity: 60%;
+
+}
+.DekstopMenu .container .row .col-12 ul li.active a{
+    color: var(--color-1);
+    opacity: 1;
+}
+.DekstopMenu .container .row .col-12 ul li.active span{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--color-1);
+    opacity: 50%;
+    border-radius: 4px 4px 0px 0px;
+    box-shadow: 0px 29px 39px rgba(0, 0, 0, 0.01);
+}
+/*----------------
+Mobile Nav
+----------------*/
+.MobileNav{
+    width: 100%;
+    height: 60px;
+    padding-bottom: 10px;
+
+}
+.MobileNav .container{
+    height: 100%;
+}
+.MobileNav .container .row{
+    height: 100%;
+}
+.MobileNav .container .row .col-12{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MobileNav .logo p{
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-text-2);
+    font-size: 30px;
+}
+/*----------------
+Mobile Open Menu
+----------------*/
+
+.MobileOpenMenu{
+    position: fixed;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--color-1);
+    transition: all 500ms;
+    visibility: hidden;
+    z-index:1000;
+    overflow: hidden;
+    border-top: 1px solid var(--color-3);
+}
+
+.MobileOpenMenu.active{
+    height: 100%;
+    visibility: visible;
+}
+
+.MobileOpenMenu .content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.MobileOpenMenu .content .navList ul{
+    padding: 0;
+    margin: 0;
+}
+.MobileOpenMenu .content .navList ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0px;
+    position: relative;
+    width: 80px;
+}
+.MobileOpenMenu .content .navList ul li a{
+    color: var(--color-text-1);
+    text-decoration: none;
+
+
+}
+.MobileOpenMenu .content .navList ul li.active a{
+    color: var(--color-text-2);
+}
+.MobileOpenMenu .content .Basket{
+    margin: 20px 0;
+}
+.MobileOpenMenu .content .Basket div button{
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+}
+.MobileOpenMenu .content .Basket div button svg{
+    width: 100%;
+    height: 100%;
+}
+.MobileOpenMenu .content .Basket div button .CountDiv{
+    position: absolute;
+    bottom: -60%;
+    right: -50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-2);
+    color: white;
+}
+.MobileOpenMenu .content .Basket div button .CountDiv p{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    margin: 0;
+}
+.MobileOpenMenu .content .LoginRegister{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.MobileOpenMenu .content .LoginRegister button:nth-child(1){
+    width: 102px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-1);
+    color: var(--color-text-1);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+.MobileOpenMenu .content .LoginRegister button:nth-child(2){
+    width: 182px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-2);
+    color: var(--color-1);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+/*----------------
+Medias
+----------------*/
+@media (min-width:992px){
+    .MobileNav{
+        display:none;
+    }
+}
+@media (max-width:992px){
+    .DekstopMenu{
+        display: none;
+    }
+    .DekstopNav{
+        display: none;
+    }
+}
