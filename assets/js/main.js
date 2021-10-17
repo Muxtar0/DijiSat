@@ -18,11 +18,17 @@ for(let i=0;i<changeThemeBtn.length;i++){
     changeThemeBtn[i].addEventListener('click' , (e) =>  {
         document.body.classList.toggle('active');
         if(theme == "dark"){
-            changeThemeBtn.innerHTML = '<i class="fas fa-moon"></i>'
+            for(let i=0;i<changeThemeBtn.length;i++){
+                changeThemeBtn[i].innerHTML = '<i class="fas fa-moon"></i>'
+                
+            }
             theme = 'light'
         }    
         else{
-            changeThemeBtn.innerHTML = '<i class="fas fa-sun"></i>'
+            for(let i=0;i<changeThemeBtn.length;i++){
+                changeThemeBtn[i].innerHTML = '<i class="fas fa-sun"></i>'
+  
+            }
             theme = 'dark'
         }
     })

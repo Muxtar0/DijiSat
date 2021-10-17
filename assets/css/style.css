@@ -68,7 +68,7 @@ Global Style
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 40px 0 0px 0;
+    padding-top: 40px;
 }
 .SecondSectionTitle h2{
     color: var(--color-text-2);
@@ -151,6 +151,17 @@ Swiper Style
   .swiper-button-prev:hover i{
     color: white;
   }
+  #Testimonials .TestimonialsSwiper  .swiper-button-next,
+  #Testimonials .TestimonialsSwiper  .swiper-button-prev{
+      top: auto !important;
+      bottom: 10px !important;
+      left: auto !important;
+      right: 25px !important;
+      box-shadow: 0px 7px 20px rgba(141, 40, 173, 0.15) !important;
+  }
+  #Testimonials .TestimonialsSwiper  .swiper-button-prev{
+      margin-right: 70px;
+  }
   @media screen and (max-width:992px) {
     .swiper-button-next,
     .swiper-button-prev{
@@ -162,6 +173,14 @@ Swiper Style
         height: 20px !important;
         width: 30px !important;
         box-shadow: none !important;
+    }
+    #Testimonials .TestimonialsSwiper  .swiper-button-next,
+    #Testimonials .TestimonialsSwiper  .swiper-button-prev{
+        left: auto !important;
+        right: 0px !important;
+    }
+    #Testimonials .TestimonialsSwiper  .swiper-button-prev{
+        margin-right: 40px;
     }
     .swiper-button-next i,
     .swiper-button-prev i{
@@ -1004,6 +1023,210 @@ Best Sellers
     color: #ffc000;
 }
 /*----------------
+Categories
+----------------*/
+#Categories{
+    padding: 40px 0;
+    background: var(--color-1);
+}
+#Categories .CategoriesCard{
+    background: var(--color-2);
+    border-radius: 10px;
+    padding: 30px;
+}
+#Categories .CategoriesCard a{
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: start;
+}
+#Categories .CategoriesCard p:nth-child(1){
+    color: var(--color-text-3);
+    font-size: 600;
+    font-weight: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+#Categories .CategoriesCard p:nth-child(2){
+    color: var(--color-text-3);
+    font-size: 500;
+    font-weight: 18px;
+    line-height: 27px;
+    margin-bottom: 0px;
+    opacity: 60%;
+}
+/*----------------
+LatestNews
+----------------*/
+#LatestNews .CardContent{
+    background: var((--color-1));
+}
+#LatestNews .CardContent .ImgDiv{
+    height: 210px;
+    border-radius: 10px 10px 0 0;
+}
+#LatestNews .CardContent .ImgDiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+}
+#LatestNews .CardContent .TextDiv{
+    padding: 25px 0;
+}
+#LatestNews .CardContent .TextDiv .TopText h4{
+    color: var(--color-text-2);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 32px;
+}
+#LatestNews .CardContent .TextDiv .TopText p{
+    color: var(--color-text-2);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+}
+#LatestNews .CardContent .TextDiv .TopText p span{
+    opacity: 50%;
+}
+#LatestNews .CardContent .TextDiv .TopText a{
+    color: var(--color-2);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    opacity: 100%;
+    text-decoration: none;
+    margin-left: 5px;
+}
+#LatestNews .CardContent .TextDiv .BottomText{
+    display: flex;
+    align-items: center;
+}
+#LatestNews .CardContent .TextDiv .BottomText .ProfilePhotoDiv{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: gray;
+}
+#LatestNews .CardContent .TextDiv .BottomText .ProfilePhotoDiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#LatestNews .CardContent .TextDiv .BottomText .ProfileTextDiv{
+    margin-left: 10px;
+}
+#LatestNews .CardContent .TextDiv .BottomText .ProfileTextDiv p:nth-child(1){
+    color: var(--color-text-4);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 4px;
+}
+#LatestNews .CardContent .TextDiv .BottomText .ProfileTextDiv p:nth-child(2){
+    color: var(--color-text-2);
+    opacity: 60%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0px;
+}
+#LatestNews .ViewMoreCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    background: var(--color-1);
+}
+#LatestNews .ViewMoreCol a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: var(--color-2);
+    width: 183px;
+    height: 68px;
+    font-size: 500;
+    font-weight:16px ;
+    line-height: 24px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+#LatestNews .ViewMoreCol a i{
+    margin-left: 10px;
+}
+/*----------------
+Testimonials
+----------------*/
+#Testimonials{
+    padding: 40px 0;
+    background: var(--color-1);
+}
+#Testimonials .CardContent{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 7px 20px rgba(141, 40, 173, 0.15);
+}
+#Testimonials .CardContent .RateDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FF7A00;
+}
+#Testimonials .CardContent .RateDiv i:not(:nth-child(1)){
+    margin-left: 10px;
+}
+#Testimonials .CardContent .TextDiv p{
+    text-align: start;
+    color: var(--color-text-2);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 30px 0;
+}
+#Testimonials .CardContent .ProfileDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#Testimonials .CardContent .ProfileDiv .ProfileText p:nth-child(1){
+    color: var(--color-text-4);
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 4px;
+    text-align: start;
+}
+#Testimonials .CardContent .ProfileDiv .ProfileText p:nth-child(2){
+    color: var(--color-text-2);
+    opacity: 60%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 0px;
+    text-align: start;
+}
+#Testimonials .CardContent .ProfileDiv .ProfileImgDiv{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: gray;
+}
+#Testimonials .CardContent .ProfileDiv .ProfileImgDiv img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#Testimonials .TestimonialsSwiper{
+    padding-bottom: 100px;
+}
+/*----------------
 Medias
 ----------------*/
 @media (min-width:992px){
@@ -1029,5 +1252,8 @@ Medias
     }
     #BestSellers .BestSellersSwiper{
         padding: 50px 0px;
+    }
+    #Testimonials .TestimonialsSwiper{
+        padding-bottom: 50px;
     }
 }
