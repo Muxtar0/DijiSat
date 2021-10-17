@@ -1317,6 +1317,165 @@ Subscribe
     color: #E2E2E2;
 }
 /*----------------
+FooterTop
+----------------*/
+footer{
+    padding: 40px 0 0 0 ;
+    background: var(--color-1);
+}
+.FooterTop{
+    padding-bottom: 20px;
+}
+.FooterTop .col-12{
+    margin-top: 15px;
+}
+.FooterTop .FirstCol .logo p{
+    margin: 0;
+    font-weight: bold;
+    color: var(--color-text-4);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.FooterTop .FirstCol > p{
+    color: var(--color-text-1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.FooterTop .FirstCol .SocialLink > p{
+    color: var(--color-text-2);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.FooterTop .FirstCol .SocialLink div{
+    display: flex;
+    align-items: center;
+    
+}
+.FooterTop .FirstCol .SocialLink a{
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--color-2);
+    color: var(--color-2);
+    transition: all 300ms;
+}
+.FooterTop .FirstCol .SocialLink a:hover{
+    background: var(--color-2);
+    color: white;
+}
+.FooterTop .FirstCol .SocialLink a:not(:first-child){
+    margin-left: 10px;
+}
+.FooterTop .col-lg-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.FooterTop .col-lg-2  p{
+    color: var(--color-text-2);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    margin-bottom: 20px;
+}
+.FooterTop .col-lg-2  ul{
+    margin: 0;
+    padding: 0;
+}
+.FooterTop .col-lg-2  ul li{
+    margin: 10px 0;
+}
+.FooterTop .col-lg-2  ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    color: var(--color-text-1);
+    transition: all 300ms;
+}
+.FooterTop .col-lg-2  ul li:hover{
+    transform: translateX(5px);
+}
+.FooterTop .SecondCol h4{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    color: var(--color-text-2);
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.FooterTop .SecondCol p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--color-text-1);
+    margin-bottom: 30px;
+}
+.FooterTop .SecondCol div{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.FooterTop .SecondCol  input{
+    background: var(--color-3);
+    height: 68px;
+    border-radius: 8px;
+    color: #A4A4A4;
+    width: 70%;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+.FooterTop .SecondCol div input::placeholder{
+    color: #A4A4A4;
+}
+.FooterTop .SecondCol div button{
+    height: 68px;
+    border-radius: 8px;
+    width: 28%;
+    margin-left: 10px;
+    border: 1px solid var(--color-2);
+    background: var(--color-2);
+    color: white;
+}
+.FooterTop .SecondCol div button:hover{
+    background: transparent;
+    color: var(--color-2);
+}
+.FooterBottomMain{
+    width: 100%;
+    padding: 20px 0  ;
+    border-top: 1px solid #EBEBEB;
+}
+.FooterBottomMain .col-12{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+.FooterBottomMain .col-12 p:nth-child(1){
+    color: var(--color-text-1);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+}
+.FooterBottomMain .col-12 p:nth-child(2){
+    color: var(--color-text-1);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+}
+/*----------------
 Medias
 ----------------*/
 @media (min-width:992px){
@@ -1324,6 +1483,9 @@ Medias
         display:none;
     }
     .BottomMenu{
+        display: none;
+    }
+    .mainpagescroll{
         display: none;
     }
 }
@@ -1346,6 +1508,9 @@ Medias
     #Testimonials .TestimonialsSwiper{
         padding-bottom: 50px;
     }
+    .FooterTop .col-lg-2{
+        justify-content: flex-start;
+    }
 }
 @media (max-width:600px){
     #Subscribe .col-12:nth-child(1) p{
@@ -1360,6 +1525,16 @@ Medias
     }
     #Subscribe .col-12:nth-child(2) button{
         margin: 0;
+        margin-top: 10px;
+    }
+    .FooterBottomMain .col-12{
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .FooterBottomMain .col-12 p{
+        text-align: center;
+    }
+    .FooterBottomMain .col-12 p:nth-child(2){
         margin-top: 10px;
     }
 }
