@@ -1227,6 +1227,96 @@ Testimonials
     padding-bottom: 100px;
 }
 /*----------------
+Information
+----------------*/
+#Information{
+    padding: 60px 0 80px 0;
+    background: #380B46;
+}
+#Information .CardCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 20px;
+}
+#Information .CardCol .Cost p{
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 75px;
+}
+#Information .CardCol .Cost p i{
+    margin-right: 10px;
+}
+#Information .CardCol > p{
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 20px;
+    opacity: 60%;
+}
+/*----------------
+Subscribe
+----------------*/
+#Subscribe{
+    padding: 40px 0 60px 0;
+    background: #8D28AD;
+}
+#Subscribe .col-12{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Subscribe .col-12:nth-child(1) p{
+    color: white;
+    margin: 0;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 55px;
+}
+#Subscribe .col-12:nth-child(2) div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+#Subscribe .col-12:nth-child(2) input{
+    background: #F3F3F329;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #E2E2E2;
+    height: 68px;
+    width: 80%;
+    padding: 0 10px;
+}
+#Subscribe .col-12:nth-child(2) button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid white;
+    transition: all 300ms;
+    color: #8D28AD;
+    border-radius: 8px;
+  
+    outline: none;
+    height: 68px;
+    width: 150px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 10px;
+}
+#Subscribe .col-12:nth-child(2) button:hover{
+    background: transparent;
+    color: white;
+}
+#Subscribe .col-12:nth-child(2) input::placeholder{
+    color: #E2E2E2;
+}
+/*----------------
 Medias
 ----------------*/
 @media (min-width:992px){
@@ -1255,5 +1345,21 @@ Medias
     }
     #Testimonials .TestimonialsSwiper{
         padding-bottom: 50px;
+    }
+}
+@media (max-width:600px){
+    #Subscribe .col-12:nth-child(1) p{
+        font-size: 30px;
+    }
+    #Subscribe .col-12:nth-child(2) div{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    #Subscribe .col-12:nth-child(2) input{
+        width: 100%;
+    }
+    #Subscribe .col-12:nth-child(2) button{
+        margin: 0;
+        margin-top: 10px;
     }
 }
