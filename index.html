@@ -30,15 +30,21 @@
                         </div>
                         <div class="SearchBox">
                             <div>
-                                <input type="text" placeholder="Find books here..">
-                                <button class="search">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M23.7871 22.7761L17.9548 16.9437C19.5193 15.145 20.4665 12.7982 20.4665 10.2333C20.4665 4.58714 15.8741 0 10.2333 0C4.58714 0 0 4.59246 0 10.2333C0 15.8741 4.59246 20.4665 10.2333 20.4665C12.7982 20.4665 15.145 19.5193 16.9437 17.9548L22.7761 23.7871C22.9144 23.9255 23.1007 24 23.2816 24C23.4625 24 23.6488 23.9308 23.7871 23.7871C24.0639 23.5104 24.0639 23.0528 23.7871 22.7761ZM1.43149 10.2333C1.43149 5.38004 5.38004 1.43681 10.2279 1.43681C15.0812 1.43681 19.0244 5.38537 19.0244 10.2333C19.0244 15.0812 15.0812 19.035 10.2279 19.035C5.38004 19.035 1.43149 15.0865 1.43149 10.2333Z" fill="#A4A4A4"/>
-                                        </svg>
-                                        
-                                </button>
+                                
+                                <form role="search" method="get" action="http://www.dijisat.efendiworks.com/">
+                                    <input type="search" placeholder="Find books here.." id="woocommerce-product-search-field-0" value="" name="s">
+                                    <input type="hidden" name="post_type" value="product">
+                                    <button class="search">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.7871 22.7761L17.9548 16.9437C19.5193 15.145 20.4665 12.7982 20.4665 10.2333C20.4665 4.58714 15.8741 0 10.2333 0C4.58714 0 0 4.59246 0 10.2333C0 15.8741 4.59246 20.4665 10.2333 20.4665C12.7982 20.4665 15.145 19.5193 16.9437 17.9548L22.7761 23.7871C22.9144 23.9255 23.1007 24 23.2816 24C23.4625 24 23.6488 23.9308 23.7871 23.7871C24.0639 23.5104 24.0639 23.0528 23.7871 22.7761ZM1.43149 10.2333C1.43149 5.38004 5.38004 1.43681 10.2279 1.43681C15.0812 1.43681 19.0244 5.38537 19.0244 10.2333C19.0244 15.0812 15.0812 19.035 10.2279 19.035C5.38004 19.035 1.43149 15.0865 1.43149 10.2333Z" fill="#A4A4A4"/>
+                                            </svg>
+                                            
+                                    </button>
+                                </form>
             
                             </div>
+
+
                         </div>
                         <div class="BasketDarkMode">
                             <div class="Basket">
@@ -161,9 +167,9 @@
     <div class="BottomMenu">
         <div class="content">
             <ul>
-                <li><a href="#"><i class="fas fa-home"></i> Shop</a></li>
-                <li><a href="#"><i class="far fa-heart"></i> WhishList</a></li>
-                <li><a href="#"><i class="far fa-user"></i> My Account</a></li>
+                <li><a href="#"><i class="fas fa-home"></i> </a></li>
+                <li><a href="#"><i class="far fa-heart"></i> </a></li>
+                <li><a href="#"><i class="far fa-user"></i></a></li>
             </ul>
         </div>
     </div>
@@ -843,20 +849,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 cl-12 CardCol">
-                    <div class="Cost">
-                        <p><i class="fas fa-store"></i>268</p>
+                    <div class="Cost ">
+                        <p ><i class="fas fa-store"></i> <span id="CostStore">0</span> </p>
                     </div>
                     <p>Our stores around the world</p>
                 </div>
                 <div class="col-lg-4 cl-12 CardCol">
                     <div class="Cost">
-                        <p><i class="fas fa-users"></i>25,634</p>
+                        <p><i class="fas fa-users"></i> <span id="Customers">0</span></p>
                     </div>
                     <p>Our happy customers</p>
                 </div>
                 <div class="col-lg-4 cl-12 CardCol">
                     <div class="Cost">
-                        <p><i class="fas fa-swatchbook"></i>68+k</p>
+                        <p><i class="fas fa-swatchbook"></i> <span id="Collections">0</span>+k</p>
                     </div>
                     <p>Book Collections</p>
                 </div>
@@ -957,11 +963,25 @@
     <div class="mainpagescroll" style="height: 70px;"></div>
 
     <!-- Scripts start -->
+    <script src="assets/js/countUp.js"></script>
+
     <script src="assets/js/main.js"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- Initialize Swiper -->
     <script>
+        let CountUpDeger = true;
+        window.addEventListener('scroll' , (e) => {
+            if(window.scrollY > 3000 && CountUpDeger == true ){
+                const countUp = new CountUp('CostStore',0,268)
+                countUp.start();
+                const countUpSecond = new CountUp('Customers',0,25634)
+                countUpSecond.start();
+                const countUpThreeth = new CountUp('Collections',0,68)
+                countUpThreeth.start();
+                CountUpDeger = false;
+            }
+        })
         var swiper = new Swiper(".BestSellersSwiper", {
           slidesPerView: 1,
           spaceBetween: 10,
